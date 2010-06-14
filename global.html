@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+
+
+safari.application.addEventListener("command", performCommand, true);
+
+
+function findBar()
+{
+	var bars = safari.extension.bars;
+    for (var i = 0; i < bars.length; ++i) {
+        if (bars[i].identifier !== "googleappsbar")
+            continue;
+		return bars[i];
+	}
+	return 0;
+}
+
+function performCommand(event)
+{
+    // Switch based on the command of the event. You should always check the command.
+    switch (event.command) {
+    case "googleappsbutton":
+        // Show an alert with the number of messages. 
+        // Reset the unread messages back to 0.
+		toggleBar();
+        break;
+    }
+}
+
+
+function toggleBar()
+{
+	var bar = findBar();
+	if (bar) {
+		if (bar.visible) 
+			bar.hide();
+		else
+			bar.show();
+	}
+}
+	
+
+
+function hideBar()
+{
+	var bars = safari.extension.bars;
+    for (var i = 0; i < bars.length; ++i) {
+        if (bars[i].identifier !== "googleappsbar")
+            continue;
+		bars[i].hide();
+	}
+}
+
+
+</script>
+</head>
+</html>
