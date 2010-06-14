@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Google Apps Bar</title>
+<title>Google Apps Bar</title>
+<link rel="stylesheet" type="text/css" href="barstyle.css">
 <script>
 
 
-var applicationNames=["Mail","Calender","Docs"]
-var applicationURLs=["http://mail.google.com/a/{domain}/","http://www.google.com/calendar/hosted/{domain}","http://docs.google.com/a/{domain}"]
+var applicationNames=["Mail","Calender","Docs","Manage"]
+var applicationURLs=["http://mail.google.com/a/-domain-/","http://www.google.com/calendar/hosted/-domain-","http://docs.google.com/a/-domain-","http://www.google.com/a/-domain-"]
 
 function renderBar()
 {
@@ -16,10 +17,16 @@ function renderBar()
     var listDiv = document.getElementById('googleAppsList');
 	var newList = "";
 	for (var i=0; i<domainList.length; i++){
-		if (i!=0)
-			newList = newList + " - "
-		newList = newList + domainList[i] ;
+		if (i!=0) newList = newList + "&nbsp;|&nbsp;&nbsp;"
+		newList = newList + "<em>" + domainList[i] + "</em>&nbsp;";
+		for (var j=0; j<applicationNames.length; j++){
+			var url = applicationURLs[j].replace(/-domain-/,domainList[i]);
+			newList = newList + "<a href=\"" + url + "\">" + applicationNames[j] + "</a>";
+		}
 	}
+
+
+
 	listDiv.innerHTML=newList;
 }
 

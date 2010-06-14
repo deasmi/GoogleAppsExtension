@@ -6,6 +6,8 @@
 
 
 safari.application.addEventListener("command", performCommand, true);
+safari.self.addEventListener("change",prefsChanged,false);
+
 
 
 function findBar()
@@ -32,6 +34,16 @@ function performCommand(event)
 }
 
 
+function prefsChanged()
+{
+	alert("Prefs");
+	var bar = findBar();
+	if (bar) {
+		bar.renderBar();
+	}
+}
+
+
 function toggleBar()
 {
 	var bar = findBar();
@@ -45,15 +57,9 @@ function toggleBar()
 	
 
 
-function hideBar()
-{
-	var bars = safari.extension.bars;
-    for (var i = 0; i < bars.length; ++i) {
-        if (bars[i].identifier !== "googleappsbar")
-            continue;
-		bars[i].hide();
-	}
-}
+
+
+
 
 
 </script>
