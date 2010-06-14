@@ -4,7 +4,7 @@
 <array>
 	<dict>
 		<key>DefaultValue</key>
-		<string>zelotus.com,technicalgrowth.co.uk</string>
+		<string></string>
 		<key>Key</key>
 		<string>domainList</string>
 		<key>Title</key>

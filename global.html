@@ -6,7 +6,6 @@
 
 
 safari.application.addEventListener("command", performCommand, true);
-safari.self.addEventListener("change",prefsChanged,false);
 
 
 
@@ -34,14 +33,6 @@ function performCommand(event)
 }
 
 
-function prefsChanged()
-{
-	alert("Prefs");
-	var bar = findBar();
-	if (bar) {
-		bar.renderBar();
-	}
-}
 
 
 function toggleBar()
