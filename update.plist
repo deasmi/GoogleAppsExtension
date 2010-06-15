@@ -9,12 +9,12 @@
        <string>com.zelotus.ext.googleapps</string>
        <key>Team Identifier</key
        <string>LH7Z8M66BZ</string>
-       <key>1.1</key>
+       <key>1.2</key>
        <string>Your current bundle version</string>
-       <key>1.1</key>
+       <key>1.2</key>
        <string>Your current display version</string>
        <key>URL</key>
-       <string>http://github.com/downloads/deasmi/GoogleAppsExtension/update.plist</string>
+       <string>http://zelotus.com/gogappext/update.plist</string>
      </dict>
    </array>
 </dict>

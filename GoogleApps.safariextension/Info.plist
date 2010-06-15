@@ -71,7 +71,7 @@
 		</dict>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>http://github.com/downloads/deasmi/GoogleAppsExtension/update.plist</string>
+	<string>http://zelotus.com/gogappext/update.plist</string>
 	<key>Website</key>
 	<string>http://www.zelotus.com/</string>
 </dict>
