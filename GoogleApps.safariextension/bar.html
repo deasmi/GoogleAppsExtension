@@ -12,7 +12,8 @@ safari.extension.settings.addEventListener("change",prefsChanged,false);
 
 var applicationNames=["Mail","Calender","Docs","Manage"]
 var applicationURLs=["http://mail.google.com/a/-domain-/","http://www.google.com/calendar/hosted/-domain-","http://docs.google.com/a/-domain-","http://www.google.com/a/-domain-"]
-
+nonAppsNames=["Gmail","Google Reader"]
+nonAppsURLs=["http://gmail.com","http://reader.google.com"]
 
 function prefsChanged()
 {
@@ -24,12 +25,17 @@ function prefsChanged()
 function renderBar()
 {
 	var domainList = safari.extension.settings.getItem("domainList").split(',');
-	
+	var nonAppLinks = safari.extension.settings.getItem("nonAppsLinks");
 	
     var listDiv = document.getElementById('googleAppsList');
 	var newList = "";
+	if (nonAppLinks) {
+		for (var i=0;i<nonAppsURLs.length; i++) {
+			newList = newList + "<a href=\"" + nonAppsURLs[i] + "\">" + nonAppsNames[i] + "</a>";			
+		}
+	} 
 	if (domainList.length > 0 && domainList[0].length > 0) {
-
+	if (nonAppLinks == true) 	newList = newList + "&nbsp;|&nbsp;&nbsp;" // If we also have domains display a spacer
 	for (var i=0; i<domainList.length; i++){
 		if (i!=0) newList = newList + "&nbsp;|&nbsp;&nbsp;"
 		newList = newList + "<em>" + domainList[i] + "</em>&nbsp;";
@@ -38,11 +44,11 @@ function renderBar()
 			newList = newList + "<a href=\"" + url + "\">" + applicationNames[j] + "</a>";
 		}
 	}
-} else {
-	newList = "Please set your domain(s) in the extensions preferences...."
+	} else if (nonAppLinks == false) { // Display a message if neither a domain is set or other links enabled
+		newList = "Please set your domain(s) in the extensions preferences...."
 	
-}
-listDiv.innerHTML=newList;
+	}
+	listDiv.innerHTML=newList;
 
 }
 
