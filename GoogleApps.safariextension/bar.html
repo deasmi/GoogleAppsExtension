@@ -10,10 +10,14 @@ safari.extension.settings.addEventListener("change",prefsChanged,false);
 
 
 
-var applicationNames=["Mail","Calendar","Docs","Manage"]
+applicationNames=["Mail","Calendar","Docs","Manage"]
 var applicationURLs=["http://mail.google.com/a/-domain-/","http://www.google.com/calendar/hosted/-domain-","http://docs.google.com/a/-domain-","http://www.google.com/a/-domain-"]
-nonAppsNames=["Gmail","Google Reader"]
-nonAppsURLs=["http://gmail.com","http://google.com/calendar","http://reader.google.com"]
+nonAppsNames=["Gmail","GCalendar","GDocs","GReader"]
+nonAppsURLs=["http://gmail.com","http://google.com/calendar","http://docs.google.com","http://reader.google.com"]
+
+
+
+var staticBarContent="<div name='info' align=right>Blah</div>";
 
 function prefsChanged()
 {
@@ -26,12 +30,25 @@ function renderBar()
 {
 	var domainList = safari.extension.settings.getItem("domainList").split(',');
 	var nonAppLinks = safari.extension.settings.getItem("nonAppsLinks");
+	var enabled=[safari.extension.settings.getItem("mailLink"),
+	safari.extension.settings.getItem("calendarLink"),
+	safari.extension.settings.getItem("docsLink"),
+	safari.extension.settings.getItem("manageLink")];
+
+	var enabledNonApps=[safari.extension.settings.getItem("mailLink"),
+	safari.extension.settings.getItem("calendarLink"),
+	safari.extension.settings.getItem("docsLink"),
+	safari.extension.settings.getItem("readerLink")];
+
+
 	
     var listDiv = document.getElementById('googleAppsList');
 	var newList = "";
 	if (nonAppLinks) {
 		for (var i=0;i<nonAppsURLs.length; i++) {
-			newList = newList + "<a href=\"" + nonAppsURLs[i] + "\">" + nonAppsNames[i] + "</a>";			
+		if (enabledNonApps[i] == true) {
+			newList = newList + "<a href=\"" + nonAppsURLs[i] + "\">" + nonAppsNames[i] + "</a>";		
+			}
 		}
 	} 
 	if (domainList.length > 0 && domainList[0].length > 0) {
@@ -40,8 +57,10 @@ function renderBar()
 		if (i!=0) newList = newList + "&nbsp;|&nbsp;&nbsp;"
 		newList = newList + "<em>" + domainList[i] + "</em>&nbsp;";
 		for (var j=0; j<applicationNames.length; j++){
+			if (enabled[j] == true) {
 			var url = applicationURLs[j].replace(/-domain-/,domainList[i]);
 			newList = newList + "<a href=\"" + url + "\">" + applicationNames[j] + "</a>";
+			}
 		}
 	}
 	} else if (nonAppLinks == false) { // Display a message if neither a domain is set or other links enabled
@@ -61,7 +80,6 @@ function renderBar()
 </script>
 </head>
 <body id="bar" onload="renderBar();">
-<div id="googleAppsList"></div>
-There is a problem.... sorry
+<div id="googleAppsList" width=auto></div><div id="info" width=100px>...</div>
 </body>
 </html>
