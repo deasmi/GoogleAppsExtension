@@ -10,10 +10,10 @@ safari.extension.settings.addEventListener("change",prefsChanged,false);
 
 
 
-var applicationNames=["Mail","Calender","Docs","Manage"]
+var applicationNames=["Mail","Calendar","Docs","Manage"]
 var applicationURLs=["http://mail.google.com/a/-domain-/","http://www.google.com/calendar/hosted/-domain-","http://docs.google.com/a/-domain-","http://www.google.com/a/-domain-"]
 nonAppsNames=["Gmail","Google Reader"]
-nonAppsURLs=["http://gmail.com","http://reader.google.com"]
+nonAppsURLs=["http://gmail.com","http://google.com/calendar","http://reader.google.com"]
 
 function prefsChanged()
 {
@@ -62,6 +62,6 @@ function renderBar()
 </head>
 <body id="bar" onload="renderBar();">
 <div id="googleAppsList"></div>
-<p>Ha ha ha</p>
+There is a problem.... sorry
 </body>
 </html>
