@@ -7,13 +7,13 @@
 	<key>CFBundleDisplayName</key>
 	<string>GoogleApps</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.zelotus</string>
+	<string>com.zelotus.ext.googleapps</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>1.1</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Bars</key>
@@ -70,6 +70,8 @@
 			<string>Some</string>
 		</dict>
 	</dict>
+	<key>Update Manifest URL</key>
+	<string>http://github.com/downloads/deasmi/GoogleAppsExtension/update.plist</string>
 	<key>Website</key>
 	<string>http://www.zelotus.com/</string>
 </dict>
