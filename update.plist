@@ -8,11 +8,11 @@
        <key>CFBundleIdentifier</key>
        <string>com.zelotus.ext.googleapps</string>
        <key>Developer Identifier</key>
-       <string>LH7Z8M66BZ</string>
-       <key>1.9</key>
-       <string>Your current bundle version</string>
-       <key>1.9</key>
-       <string>Your current display version</string>
+       <string>HPEH9KBX4R</string>
+       <key>CFBundleVersion</key>
+       <string>1.9</string>
+       <key>CFBundleShortVersionString</key>
+       <string>1.9</string>
        <key>URL</key>
        <string>http://zelotus.com/gogappext/GoogleApps.safariextz</string>
      </dict>
