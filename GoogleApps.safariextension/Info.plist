@@ -11,9 +11,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.13</string>
+	<string>1.14</string>
 	<key>CFBundleVersion</key>
-	<string>1.13</string>
+	<string>1.14</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Bars</key>
@@ -37,7 +37,7 @@
 				<key>Identifier</key>
 				<string>googleappsbutton</string>
 				<key>Image</key>
-				<string>Logo.png</string>
+				<string>googleicon.png</string>
 				<key>Label</key>
 				<string>Google Apps</string>
 				<key>Palette Label</key>
