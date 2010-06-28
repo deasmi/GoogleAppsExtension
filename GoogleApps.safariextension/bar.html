@@ -11,9 +11,9 @@ safari.extension.settings.addEventListener("change",prefsChanged,false);
 
 
 applicationNames=["Mail","Calendar","Docs","Manage"]
-var applicationURLs=["http://mail.google.com/a/-domain-/","http://www.google.com/calendar/hosted/-domain-","http://docs.google.com/a/-domain-","http://www.google.com/a/-domain-"]
-nonAppsNames=["Gmail","GCalendar","GDocs","GReader"]
-nonAppsURLs=["http://gmail.com","http://google.com/calendar","http://docs.google.com","http://reader.google.com"]
+applicationURLs=["http://mail.google.com/a/-domain-/","http://www.google.com/calendar/hosted/-domain-","http://docs.google.com/a/-domain-","http://www.google.com/a/-domain-"]
+nonAppsNames=["Gmail","GCalendar","GDocs","GReader","GVoice"]
+nonAppsURLs=["http://gmail.com","http://google.com/calendar","http://docs.google.com","http://reader.google.com","https://www.google.com/voice"]
 
 
 
@@ -38,7 +38,8 @@ function renderBar()
 	var enabledNonApps=[safari.extension.settings.getItem("mailLink"),
 	safari.extension.settings.getItem("calendarLink"),
 	safari.extension.settings.getItem("docsLink"),
-	safari.extension.settings.getItem("readerLink")];
+	safari.extension.settings.getItem("readerLink"),
+	safari.extension.settings.getItem("voiceLink")];
 
 
 	
