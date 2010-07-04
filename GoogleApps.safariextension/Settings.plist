@@ -72,5 +72,17 @@
 		<key>Type</key>
 		<string>CheckBox</string>
 	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<false/>
+		<key>Key</key>
+		<string>voiceLink</string>
+		<key>Title</key>
+		<string>Google Voice Link</string>
+		<key>Titles</key>
+		<array/>
+		<key>Type</key>
+		<string>CheckBox</string>
+	</dict>
 </array>
 </plist>
