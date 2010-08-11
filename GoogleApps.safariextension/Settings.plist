@@ -16,9 +16,19 @@
 		<key>DefaultValue</key>
 		<false/>
 		<key>Key</key>
+		<string>manageLink</string>
+		<key>Title</key>
+		<string>Link to manage domain ?</string>
+		<key>Type</key>
+		<string>CheckBox</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<false/>
+		<key>Key</key>
 		<string>nonAppsLinks</string>
 		<key>Title</key>
-		<string>Links for non apps versions, eg. gmail, greader etc.</string>
+		<string>Enable the non google apps links below ?</string>
 		<key>Type</key>
 		<string>CheckBox</string>
 	</dict>
@@ -54,16 +64,6 @@
 	</dict>
 	<dict>
 		<key>DefaultValue</key>
-		<false/>
-		<key>Key</key>
-		<string>manageLink</string>
-		<key>Title</key>
-		<string>Manage Link</string>
-		<key>Type</key>
-		<string>CheckBox</string>
-	</dict>
-	<dict>
-		<key>DefaultValue</key>
 		<true/>
 		<key>Key</key>
 		<string>readerLink</string>
@@ -84,5 +84,42 @@
 		<key>Type</key>
 		<string>CheckBox</string>
 	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<false/>
+		<key>Key</key>
+		<string>analyticsLink</string>
+		<key>Title</key>
+		<string>Google Analytics Link</string>
+		<key>Titles</key>
+		<array/>
+		<key>Type</key>
+		<string>CheckBox</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<false/>
+		<key>Key</key>
+		<string>adwordsLink</string>
+		<key>Title</key>
+		<string>Google Adwords Link</string>
+		<key>Titles</key>
+		<array/>
+		<key>Type</key>
+		<string>CheckBox</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<false/>
+		<key>Key</key>
+		<string>adsenseLink</string>
+		<key>Title</key>
+		<string>Google Adsense Link</string>
+		<key>Titles</key>
+		<array/>
+		<key>Type</key>
+		<string>CheckBox</string>
+	</dict>
+	
 </array>
 </plist>

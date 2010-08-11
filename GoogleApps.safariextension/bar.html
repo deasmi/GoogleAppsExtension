@@ -24,13 +24,19 @@ nonAppsNames=[		"Gmail",
 					"GCalendar",
 					"GDocs",
 					"GReader",
-					"GVoice"]
+					"GVoice",
+					"Analytics",
+					"Adwords",
+					"Adsense"]
 
 nonAppsURLs=[		"http://gmail.com",
 					"http://google.com/calendar",
 					"http://docs.google.com",
 					"http://reader.google.com",
-					"https://www.google.com/voice"]
+					"https://www.google.com/voice",
+					"http://google.com/analytics",
+					"http://google.com/adwords",
+					"http://google.com/adsense"]
 
 
 
@@ -56,7 +62,11 @@ function renderBar()
 	safari.extension.settings.getItem("calendarLink"),
 	safari.extension.settings.getItem("docsLink"),
 	safari.extension.settings.getItem("readerLink"),
-	safari.extension.settings.getItem("voiceLink")];
+	safari.extension.settings.getItem("voiceLink"),
+	safari.extension.settings.getItem("analyticsLink"),
+	safari.extension.settings.getItem("adwordsLink"),
+	safari.extension.settings.getItem("adsenseLink"),
+	];
 
 
 	
@@ -99,6 +109,6 @@ function renderBar()
 </head>
 <body id="bar" onload="renderBar();">
 <div id="googleAppsList" width=auto></div><div id="info" width=100px></div>
-<div id="info" style="position:absolute; top:4px; right:4px;"><a href="http://www.zelotus.com/google-apps-extension/">Extension Info!</a></div>
+<div id="info" style="position:absolute; top:4px; right:4px;"><a href="http://www.zelotus.com/google-apps-extension/">Extension Homepage</a></div>
 </body>
 </html>
