@@ -10,10 +10,27 @@ safari.extension.settings.addEventListener("change",prefsChanged,false);
 
 
 
-applicationNames=["Mail","Calendar","Docs","Manage"]
-applicationURLs=["http://mail.google.com/a/-domain-/","http://www.google.com/calendar/hosted/-domain-","http://docs.google.com/a/-domain-","http://www.google.com/a/-domain-"]
-nonAppsNames=["Gmail","GCalendar","GDocs","GReader","GVoice"]
-nonAppsURLs=["http://gmail.com","http://google.com/calendar","http://docs.google.com","http://reader.google.com","https://www.google.com/voice"]
+applicationNames=[	"Mail",
+					"Calendar",
+					"Docs",
+					"Manage"]
+
+applicationURLs=[	"http://mail.google.com/a/-domain-/",
+					"http://www.google.com/calendar/hosted/-domain-",
+					"http://docs.google.com/a/-domain-",
+					"http://www.google.com/a/-domain-"]
+
+nonAppsNames=[		"Gmail",
+					"GCalendar",
+					"GDocs",
+					"GReader",
+					"GVoice"]
+
+nonAppsURLs=[		"http://gmail.com",
+					"http://google.com/calendar",
+					"http://docs.google.com",
+					"http://reader.google.com",
+					"https://www.google.com/voice"]
 
 
 
@@ -81,6 +98,7 @@ function renderBar()
 </script>
 </head>
 <body id="bar" onload="renderBar();">
-<div id="googleAppsList" width=auto></div><div id="info" width=100px>...</div>
+<div id="googleAppsList" width=auto></div><div id="info" width=100px></div>
+<div id="info" style="position:absolute; top:4px; right:4px;"><a href="http://www.zelotus.com/google-apps-extension/">Extension Info!</a></div>
 </body>
 </html>
