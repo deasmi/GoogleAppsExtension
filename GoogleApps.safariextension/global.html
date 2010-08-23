@@ -12,10 +12,14 @@ safari.application.addEventListener("command", performCommand, true);
 function findBar()
 {
 	var bars = safari.extension.bars;
+	const activeBrowserWindow = safari.application.activeBrowserWindow;
+
     for (var i = 0; i < bars.length; ++i) {
-        if (bars[i].identifier !== "googleappsbar")
-            continue;
-		return bars[i];
+		var bar = bars[i];
+        if (bar.identifier === "googleappsbar" && bar.browserWindow === activeBrowserWindow)
+		{
+				return bars[i];
+		}
 	}
 	return 0;
 }
